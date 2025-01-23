@@ -1,0 +1,377 @@
+/* Reset básico */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Serif Text",serif;
+    color: #333;
+}
+
+body {
+    background-color: #868383;
+    overflow-x: hidden;
+}
+
+/* Barra lateral fina, alta e sem bordas arredondadas */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: rgba(54, 54, 54, 0.9);
+    box-shadow: 2px 0 10px rgba(32, 32, 32, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a tela */
+}
+
+/* Estilos para os links */
+.sidebar a {
+    text-decoration: none;
+    color: #adaaaa;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin: 10px 0 15px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+.sidebar a:hover {
+    background-color: rgba(39, 38, 38, 0.8);
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+/* Estilos para as imagens */
+.sidebar img {
+    width: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Seção de redes sociais no final da barra lateral */
+.redes {
+    margin-top: auto; /* Empurra a seção para o final */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilos para imagens em cards */
+#img-card {
+    height: 20rem;
+}
+
+#funcionalidades img {
+    height: 20rem;
+    margin-bottom: 100px;
+}
+
+#beneficios img {
+    height: 15rem;
+}
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 80px; /* Espaço para a barra lateral */
+}
+
+/* Header com gradiente animado */
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #4f4f50, #1d1e1f, #969797);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: "DM Serif Text",serif;
+    background: linear-gradient(90deg, #bbbbb9, #a1a1a0);
+    background-clip: text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-family: "DM Serif Text",serif;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #bbbbb9, #a1a1a0);
+    background-clip: text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 3s ease-in-out;
+}
+
+header a {
+    margin-top: 30px;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #bbbbb9, #6d6d6c);
+    border: none;
+    border-radius: 80px;
+    color: #363535;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(8, 8, 8, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 4s ease-in-out;
+}
+
+header a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(148, 147, 147, 0.8);
+}
+
+/* Seções maiores e modernas */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #b9bdbd, #1b1b1b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Container principal do grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards responsivos */
+    gap: 100px; /* Reduzi o espaçamento entre os cards */
+    margin: 20px auto; /* Centraliza o grid na página */
+    max-width: 1200px; /* Largura máxima do grid */
+    padding: 0 20px; /* Espaçamento nas laterais */
+}
+
+/* Estilo dos cards */
+.feature-card {
+    background: #FFFFFF;
+    border: 1px solid #bbbbbb;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ocupa 100% do espaço disponível no grid */
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    color: #535353;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    color: #404141;
+    line-height: 1.5;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Estilos para os ícones (code, chip, map) */
+.code, .chip, .map, .shield, .mug, .thunder, .insta, .whats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px; /* Centraliza os ícones horizontalmente */
+    font-size: 50px;
+}
+
+.insta :hover {
+        text-decoration: none;
+        color: #adaaaa;
+        border-radius: 30px;
+        font-size: 4rem;
+        margin: 10px 0 15px 0;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.whats :hover{
+        text-decoration: none;
+        color: #adaaaa;
+        border-radius: 30px;
+        font-size: 4rem;
+        margin: 10px 0 15px 0;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+/* Parallax futurista */
+.parallax {
+    height: 60vh;
+    background: linear-gradient(135deg, rgba(39, 41, 41, 0.9), rgba(28, 29, 29, 0.9));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.parallax h2 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ffffff, #a19f9f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Rodapé */
+footer {
+    /*background: linear-gradient(135deg, #145873, #30C8D9);*/
+    padding: 40px 20px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animações */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding-top: 5px;
+        height: 100%;
+    }
+
+    .sidebar a {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        padding: 8px;
+    }
+
+    .sidebar .download-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        margin-bottom: 10px;
+    }
+
+    .sidebar img {
+        width: 30px;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card img {
+        height: auto;
+    }
+
+    #img-card, #funcionalidades img, #beneficios img {
+        height: auto;
+    }
+
+    .parallax h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    header a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+    }
+
+    .parallax h2 {
+        font-size: 1.5rem;
+    }
+}
